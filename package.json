@@ -1,0 +1,17 @@
+{
+  "name": "project_name",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "^4.10.6"
+  },
+  "devDependencies": {
+    "express": ">=4.10.6"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js"
+}

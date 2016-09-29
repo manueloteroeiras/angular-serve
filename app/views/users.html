@@ -1,0 +1,33 @@
+<div class="container">
+
+	<div class="col-md-6 col-md-offset-3 jumbotron users">
+		
+		
+		<input type="text" class="form-control" ng-model="user.name" placeholder="Firstname" aria-describedby="basic-addon1">
+
+		<input type="text" class="form-control" ng-model="user.lastname" placeholder="Lastname" aria-describedby="basic-addon1">
+
+		<input type="text" class="form-control" ng-model="user.phone" placeholder="Phone" aria-describedby="basic-addon1">
+
+		<div class="col-md-12 text-center" style="margin-top: 20px">
+			<button class="btn btn-primary" ng-click="addUser(user)">Cargar</button>
+		</div>
+
+	</div>
+
+	<input type="text" class="form-control" ng-model="searchUser" placeholder="search User" >	
+
+	<table class="table">
+		<tr class="active">
+		    <th>Name</th>
+		    <th>LastName</th> 
+		    <th>Phone</th>
+	  	</tr>
+		<tr ng-repeat="user in users | filter: searchUser ">
+		    <th>{{ user.name }}</th>
+		    <th>{{ user.lastname }}</th> 
+		    <th>{{ user.phone }}</th>
+	  	</tr>
+	</table>
+
+</div>
